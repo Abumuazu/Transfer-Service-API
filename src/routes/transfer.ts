@@ -6,13 +6,13 @@ import crypto from "crypto";
 
 // Dtatbase 1
 let transactionDatabase:any;
-if( fs.existsSync('./database/transaction.json')){
-    fs.readFile('./database/transaction.json', ((err:any, data:any) => {
+if( fs.existsSync('database/transaction.json')){
+    fs.readFile('database/transaction.json', ((err:any, data:any) => {
         if(err){
             console.error('error')
         }else {
             transactionDatabase =JSON.parse(data)
-            transactionDatabase
+           
         }
     }))
 } else {
@@ -22,22 +22,20 @@ if( fs.existsSync('./database/transaction.json')){
 let balanceDatabase: any;
 if (
   fs.existsSync(
-    '/Users/e/Desktop/DECAGON/week-7-node-008-Abumuazu/database/balance.json',
+    'database/balance.json',
   )
 ) {
   balanceDatabase = fs.readFile(
-    '/Users/e/Desktop/DECAGON/week-7-node-008-Abumuazu/database/balance.json',
+    'database/balance.json',
     (err: any, data: any) => {
       if (err) {
         console.error('erro');
       } else {
         balanceDatabase = JSON.parse(data);
-        balanceDatabase;
+        
       }
-      console.log(balanceDatabase);
     },
   );
-  balanceDatabase;
 } else {
   balanceDatabase = [];
 }
@@ -92,7 +90,7 @@ res.status(400).send('Insuficient balance')
             }
             transactionDatabase.push(newData)
             try{
-                fs.writeFile("/Users/e/Desktop/DECAGON/week-7-node-008-Abumuazu/database/transaction.json", JSON.stringify(transactionDatabase, null, 2), (err:any)=>{
+                fs.writeFile("database/transaction.json", JSON.stringify(transactionDatabase, null, 2), (err:any)=>{
                     if(err) throw err
                     console.log('data written succesfully')
                 })
@@ -126,7 +124,7 @@ balanceDatabase[receiverIndex] = updatedReceiver
 //writing files to database
 
 try{
-    fs.writeFile("/Users/e/Desktop/DECAGON/week-7-node-008-Abumuazu/database/balance.json", JSON.stringify(balanceDatabase, null, 2), (err:any)=>{
+    fs.writeFile("database/balance.json", JSON.stringify(balanceDatabase, null, 2), (err:any)=>{
         if(err) throw err
         console.log('data written succesfully')
     })

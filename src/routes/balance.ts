@@ -7,11 +7,11 @@ let balanceDatabase: any;
 
 if (
   fs.existsSync(
-    '/Users/e/Desktop/DECAGON/week-7-node-008-Abumuazu/database/balance.json',
+    'database/balance.json',
   )
 ) {
   balanceDatabase = fs.readFile(
-    '/Users/e/Desktop/DECAGON/week-7-node-008-Abumuazu/database/balance.json',
+    'database/balance.json',
     (err: any, data: any) => {
       if (err) {
         console.error('erro');
@@ -58,7 +58,7 @@ router.post('/', (req: Request, res: Response, next: NextFunction) => {
         // writing file to database
         try {
           fs.writeFile(
-            '/Users/e/Desktop/DECAGON/week-7-node-008-Abumuazu/database/balance.json',
+            'database/balance.json',
             JSON.stringify(balanceDatabase, null, 2),
             (err: any) => {
               if (err) throw new Error('err');
