@@ -1,0 +1,21 @@
+[
+  {
+    "accountNumber": "1234567898",
+    "balance": 4567
+  },
+  {
+    "accountNumber": "1234567897",
+    "balance": 4567,
+    "createdAt": "Sun Aug 15 2021 12:24:34 GMT-0700 (Pacific Daylight Time)"
+  },
+  {
+    "accountNumber": "1234567891",
+    "balance": 356,
+    "createdAt": "Sun Aug 15 2021 12:43:18 GMT-0700 (Pacific Daylight Time)"
+  },
+  {
+    "accountNumber": "1234567899",
+    "balance": 454,
+    "createdAt": "Sun Aug 15 2021 15:28:29 GMT-0700 (Pacific Daylight Time)"
+  }
+]
