@@ -136,5 +136,17 @@ try{
 })
 
 
+// Getting transact by reference
+router.get('/transactions/:reference', (req: Request, res: Response, next: NextFunction) => {
+    const {reference} = req.params
+    const transactionDetail =  transactionDatabase.filter((x:transaction) => x.reference === reference)
+    transactionDetail.length === 0
+    ? res.status(400).send(' We have no record of this transaction details , Kindly check that you input the right reference')
+    : res.status(200).send(transactionDetail[0])
+})
 
+// Getting all transaction Details 
+router.get('/transactions', (req: Request, res: Response, next: NextFunction) => {
+    res.status(200).send(transactionDatabase)
+})
 export default router 
