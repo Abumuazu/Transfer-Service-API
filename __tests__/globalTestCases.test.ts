@@ -32,6 +32,7 @@ interface balance {
           const result = await supertest(app).get('/balancec')
           expect(result.status).toBe(404)
       })
+      
   })
 
   //Getting balance by account number 

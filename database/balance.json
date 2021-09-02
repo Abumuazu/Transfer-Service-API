@@ -1,11 +1,11 @@
 [
   {
     "accountNumber": "1234567898",
-    "balance": 4567
+    "balance": 4067
   },
   {
     "accountNumber": "1234567897",
-    "balance": 4567,
+    "balance": 5067,
     "createdAt": "Sun Aug 15 2021 12:24:34 GMT-0700 (Pacific Daylight Time)"
   },
   {
@@ -22,5 +22,10 @@
     "accountNumber": "1234558399",
     "balance": 454,
     "createdAt": "Tue Aug 17 2021 20:50:30 GMT-0700 (Pacific Daylight Time)"
+  },
+  {
+    "accountNumber": "5643789215",
+    "balance": 400,
+    "createdAt": "Thu Aug 19 2021 10:27:20 GMT-0700 (Pacific Daylight Time)"
   }
 ]
