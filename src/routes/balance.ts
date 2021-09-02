@@ -87,5 +87,26 @@ router.post('/', (req: Request, res: Response, next: NextFunction) => {
   }
 });
 
+// getting a user by a particular account number
+router.get(
+  '/:accountNumber',
+  (req: Request, res: Response, next: NextFunction) => {
+    const { accountNumber } = req.params;
+    const user = balanceDatabase.filter(
+      (x: balance) => x.accountNumber === accountNumber,
+    );
+    if (user.length === 0) {
+      res
+        .status(404)
+        .send(`user with account number ${accountNumber} does not exist`);
+    } else {
+      res.status(200).send(user[0]);
+    }
+  },
+);
 
+// Getting all account balances from data base
+router.get('/', (req: Request, res: Response, next: NextFunction) => {
+  res.status(200).send(balanceDatabase);
+});
 export default router;
